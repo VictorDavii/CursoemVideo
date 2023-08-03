@@ -9,11 +9,25 @@ buttonhours.addEventListener('click', ()=>{
     var campohours = document.querySelector('input#hours').value
     var resp = document.getElementById('res')
     var nome = document.querySelector('input#nome')
-    var idade = Number(document.querySelector('input#idade')).value
-
-    var timeComponents = campohours.split(':')
+    var TextIdade = document.querySelector('input#idade')
     
+    var idade = Number(TextIdade.value)
+    var timeComponents = campohours.split(':')
+
+
+    var totHours = setHours(idade, timeComponents)
+    
+    resp.innerText = `Aqui ${totHours}`
+    
+    
+    
+})
+
+
+function setHours(idade, timeComponents){
+
     var hours = parseInt(timeComponents[0], 10);
+    var minutes = parseInt(timeComponents[1], 10);
 
     if(idade < 12 || idade >= 60){
 
@@ -27,15 +41,7 @@ buttonhours.addEventListener('click', ()=>{
             var div = hours
 
             hours = div % 24 
-
         }
-
-        resp.innerHTML = `<h1>Olá ${nome.value}</h1>`
-
-        resp.innerHTML += `Para a idade ${idade}, a quantidade de sono vai ser de pelo menos ${quantTime} por dia.` 
-
-        resp.innerHTML += `<br> O horário que você deve acordar é ${hours}`
-        
     }
     else{
 
@@ -43,32 +49,24 @@ buttonhours.addEventListener('click', ()=>{
 
         hours += quantTime 
 
-        if(hours >= 24){
+       
+
+        if(hours > 24){
 
             var div = hours
 
             hours = div % 24 
 
         }
-
-        resp.innerHTML = `<h1>Olá ${nome.value}</h1> <br>`
-
-        resp.innerHTML += `Para a idade ${idade}, a quantidade de sono vai ser de pelo menos ${quantTime} por dia. <br>` 
-
-        resp.innerHTML += `O horário que você deve acordar é ${hours}`
+        
         
     }
-    
-    /* 
-    adicionar os segundos:
 
-    - criar uma variável. 
-    - Somar na variável hours
-
-    */
-})
+    var totHours = hours + (minutes / 100)
 
 
+    return totHours
+}
 
 
 

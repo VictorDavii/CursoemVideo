@@ -1,0 +1,27 @@
+
+    
+    
+    
+
+   
+         // hours + minutes 
+
+        var totHours = hours + (minutes / 100)
+        
+
+        resp.innerHTML = `<h1>Olá ${nome.value}</h1>`
+
+        resp.innerHTML += `Para a idade ${idade}, a quantidade de sono vai ser de pelo menos ${quantTime} por dia.` 
+
+        resp.innerHTML += `<br> O horário que você deve acordar é ${totHours.toFixed(2)}`
+        
+    }
+    
+
+    /* 
+    adicionar os segundos:
+
+    - criar uma variável. 
+    - Somar na variável hours
+
+    */
