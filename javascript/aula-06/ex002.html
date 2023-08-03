@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro programa ...</title>
+    <style>
+        body{
+            background-color: #dddddd62;
+            color: black;
+        }
+        #nome{
+            margin-left: 5px;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aula 06 - Tratamento de dados</h1>
+    <p>Vamos armazenar os dados em variáveis para que esses dados posam ser manipulador e tratados.</p>
+
+    <p>Aqui seu nome = <span id="nome"></span></p>
+    <script>
+        // var boxnome = document.querySelector("span#nome")
+        // boxnome.textContent = nome
+        
+        var nome = prompt('Qual o seu nome ? ') 
+        alert("Seja bem-vindo, " + nome)
+    </script>
+</body>
+</html>

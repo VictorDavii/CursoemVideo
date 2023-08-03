@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Local atual</h1>
+    Qual o país atual: <input type="text" name="paisAtual" id="paisAtual">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div class="res">
+
+    </div>
+       
+    <script>
+
+        function calcular(){
+
+
+            var paisAtual = document.querySelector('input#paisAtual')
+            var res = document.querySelector('div.res')
+
+            if(paisAtual.value == 'Brasil'|| paisAtual.value == 'brasil'){
+               res.innerHTML += '<p>Você é <strong>Brasileiro! </strong></p>'
+            }
+            else{
+                res.innerHTML += ' <p>Você é <strong>estrangeiro! </strong></p>'
+            }
+        }
+
+
+
+
+    </script>
+</body>
+</html>

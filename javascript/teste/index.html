@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lugar para testar comandos</title>
+</head>
+<body>
+    <h1>Transformando número em R$</h1>
+    <p>em um input colocamos um numero qualquer e com um botão enviamos a resposta para que seja convertido em r$, depois exibido na documento.</p>
+
+    <div class="resposta">
+
+        <label for="campoResposta">Resposta: <input type="text" id="campoResposta"></label>
+        <input type="button" value="Enviar resposta" id="resposta">
+        <h1 id="resultado"></h1>
+    </div>
+
+    <script>
+
+        var campoResposta = document.querySelector('input#campoResposta')
+        var enviarResposta = document.querySelector('input#resposta')
+
+        enviarResposta.addEventListener('click', ()=>{
+            const resultado = document.querySelector('h1#resultado')
+            var valueResposta = campoResposta.value
+            
+            valueResposta = Number(valueResposta).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+
+            resultado.textContent = valueResposta
+        })
+
+        
+    </script>
+</body>
+</html>
