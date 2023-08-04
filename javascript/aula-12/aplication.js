@@ -17,7 +17,7 @@ buttonhours.addEventListener('click', ()=>{
 
     var totHours = setHours(idade, timeComponents)
     
-    resp.innerText = `Aqui ${totHours}`
+    resp.innerText = `${nome.value}, O horário que deve acordar é ${totHours} !`
     
     
     
