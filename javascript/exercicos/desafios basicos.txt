@@ -1,0 +1,1 @@
+alguns desafios básicos para dominar o JS.
