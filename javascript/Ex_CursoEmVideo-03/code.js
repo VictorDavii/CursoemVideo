@@ -39,3 +39,5 @@ enviarContagem.addEventListener('click', ()=>{
         resultado.innerHTML += `<i class="fa-solid fa-flag-checkered"></i>`
     }
 })
+
+
