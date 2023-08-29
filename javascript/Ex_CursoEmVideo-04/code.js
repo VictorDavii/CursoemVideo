@@ -12,7 +12,10 @@ gerarTabuada.addEventListener('click', ()=>{
         var soma = 0
         for(var i = 0 ; i <= 10; i++){
              soma = (numero)*i
-             resposta.innerHTML += `<option class="valor">${numero} X ${i} = ${soma}</option>$ `
+             let option = document.createElement('option')
+             option.innerText = `${numero} X ${i} = ${soma}`
+             resposta.appendChild(option)
+
          }
     }
 })
