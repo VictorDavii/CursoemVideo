@@ -14,3 +14,5 @@ listaDeAprovados.forEach((item, position, lista) =>{
     console.log(`Sua posição na fila é: ${position}`)
     console.log(`A quantidade de pessoas na lista é de: ${lista.length}`)
 });
+
+
