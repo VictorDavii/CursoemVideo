@@ -15,7 +15,7 @@ gerarTabuada.addEventListener('click', ()=>{
              let option = document.createElement('option')
              option.innerText = `${numero} X ${i} = ${soma}`
              resposta.appendChild(option)
-
+             
          }
     }
 })

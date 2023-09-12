@@ -2,7 +2,7 @@
 function carregar(){
 
     var date = new Date()
-    var hora = date.getHours()
+    var hora = date.getHours() //pegando a hora do objeto Date()
 
     var msg = document.querySelector('div#horas')
     var img = document.getElementById('imagem')
