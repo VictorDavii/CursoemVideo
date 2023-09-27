@@ -25,8 +25,11 @@ produtos.forEach((atualProduto) => {
 
     //Js quando referenciamos um atributo que não existe como 'valorComDesconto', ele automaticamente cria esse atributo dentro do objeto referenciado 'AtualProduto'.
 
-    atualProduto.valorComDescontado = atualProduto.valorProduto - (atualProduto.porcentagemDesconto * atualProduto.valorProduto); 
-    
+    let ValorCheio = atualProduto.valorProduto
+    let Porcentagem = atualProduto.porcentagemDesconto
+
+    atualProduto.valorComDescontado = ValorCheio - (Porcentagem * ValorCheio); 
+
     return produtos
 
 })
